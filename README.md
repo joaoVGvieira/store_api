@@ -1,3 +1,28 @@
+**Implementation Report - Final Challenge**
+
+This report summarizes the implementations made in response to the final challenge, highlighting the modified files and the added functionalities according to the provided requirements.
+
+1. **File `product.py`**:
+   - Implementation of methods `filter_by_price_range` and `query` in the class `ProductUsecase`:
+     - `filter_by_price_range`: Added to filter products by price range.
+     - `query`: Modified to accept optional parameters `min_price` and `max_price` to filter products by price.
+   - Modification of the `create` method to handle exceptions when inserting a product into the database.
+   - Modification of the `update` method to return a `NotFoundException` exception if the product is not found.
+
+2. **File `controllers.py`**:
+   - Added a new endpoint to handle filtered query by price range:
+     - Method `filter_products` on route `/filter`.
+
+3. **File `usecases/product.py`**:
+   - Added the `query` method in the `ProductUsecase` class to filter products by price range.
+
+4. **File `models/product.py`** (suggested modifications):
+   - Implementation of the `filter_by_price_range` method to perform the filtered query in the MongoDB database.
+
+These implementations meet the requirements of the final challenge, ensuring the functionality of filtering by price range, exception handling, and other provided specifications.
+
+## Challenge
+
 # TDD Project
 
 ## O que é TDD?
